@@ -1,0 +1,200 @@
+#content {
+    overflow: scroll;
+    position: relative;
+    border-right-color: rgb(259, 187, 117);
+    border-right-style: solid;
+}
+
+param {
+    display: inline;
+}
+
+.text_area {
+    position: relative;
+    border-bottom: 1px solid;
+    border-color: rgb(187, 189, 191);
+    cursor: text;
+}
+
+.textarea {
+    position: absolute;
+    font-size: 24px;
+}
+
+.input {
+    display: inline-block;
+    position: relative;
+}
+
+.delete {
+    font-family: Symbola, "Times New Roman", Times, serif;
+    font-size: 18px;
+    color: rgb(251, 187, 117);
+    display: inline-block;
+    position: absolute;
+    font-weight: 900;
+}
+
+.add {
+    position: relative;
+    cursor: text;
+}
+
+.text_add {
+    font-family: Symbola, "Times New Roman", Times, serif;
+    font-size: 18px;
+    color: rgb(251, 187, 117);
+    display: inline-block;
+    position: absolute;
+    font-weight: 900;
+}
+
+.blink {
+    color: #ccc;
+    font-weight: 100;
+}
+
+#keyboard {
+    left: 0px;
+    right: 0px;
+    top: 0px;
+    bottom: 0px;
+    background: rgb(220, 220, 220);
+    position: absolute;
+    border: 0;
+    overflow: hidden;
+    border-top: 3px solid #f6921b;
+}
+
+.button-area {
+    float: left;
+    margin: auto;
+    overflow: hidden;
+}
+
+.inputValue {
+    font-family: Symbola, "Times New Roman", Times, serif;
+}
+
+.controller, .triangle {
+    float: left;
+    background: rgb(255, 255, 255);
+    color: rgb(246, 146, 29);
+    border: 2px solid transparent;
+    cursor: pointer;
+    display: inline-block;
+}
+
+    .controller:active {
+        border-color: #eee;
+    }
+
+.value {
+    display: block;
+    width: 100%;
+    height: 100%;
+    font-weight: bold;
+    font-size: 2em;
+    z-index: -1;
+    text-align: center;
+}
+
+#keyboard_plus {
+    display: block;
+    position: absolute;
+    top: 5%;
+    left: 15%;
+    width: 50%;
+    height: 90%;
+    border-color: rgb(246, 146, 29);
+    border-style: solid;
+    background: rgb(255, 255, 255);
+    z-index: 1005;
+    box-shadow: inset 0 2px 4px rgba(246, 146, 29, 0.7);
+    display: none;
+}
+
+.value_ {
+    color: rgb(47, 47, 47);
+    font-family: Symbola, "Times New Roman", Times, serif;
+    font-size: 8px;
+    width: 20%;
+    height: 20%;
+    position: relative;
+    left: 35%;
+    top: 40%;
+}
+
+.radical_area .bracket:nth-of-type(1), .radical_area .bracket_:nth-last-of-type(1) {
+    display: none;
+}
+
+.radical_area param:nth-of-type(1) {
+    border-top-style: solid;
+    border-top-width: 1px;
+}
+
+.quo {
+    display: block;
+    position: relative;
+    bottom: 0;
+}
+
+.value_fac {
+    font-family: Symbola, "Times New Roman", Times, serif;
+}
+
+.valuePow1 {
+    font-family: Symbola, "Times New Roman", Times, serif;
+}
+
+.valuePow2 {
+    font-family: Symbola, "Times New Roman", Times, serif;
+}
+
+.ui-lyn-keyboard-panel {
+    position: absolute;
+    left: 0px;
+    right: 0px;
+    bottom: 0px;
+    height: 420px;
+    z-index: 9999;
+    overflow: hidden; /*display: none;*/
+}
+
+.ui-lyn-btn-press {
+    box-shadow: inset 0 0 30px rgba(246, 146, 29, 0.6);
+    border-color: rgba(246, 146, 29, 0.3);
+}
+
+.pow_area param:nth-of-type(2) {
+    position: relative;
+    top: -10px;
+}
+
+.value_log .bracket:nth-of-type(1), .value_log param:nth-of-type(1), .value_log .bracket_:nth-of-type(2) {
+    position: relative;
+    bottom: -10px;
+    font-size: 18px;
+}
+
+.value_log .bracket:nth-of-type(1), .value_log .bracket_:nth-of-type(2), .value_log .bracket:nth-of-type(3), .value_log .bracket_:nth-of-type(4),
+.value_triangle .bracket:nth-of-type(1), .value_triangle .bracket_:nth-last-of-type(1),
+.value_ceil .bracket:nth-of-type(1), .value_ceil .bracket_:nth-last-of-type(1),
+.value_ln .bracket:nth-of-type(1), .value_ln .bracket_:nth-last-of-type(1),
+.value_abs .bracket:nth-of-type(1), .value_abs .bracket_:nth-last-of-type(1),
+.value_exp .bracket:nth-of-type(1), .value_exp .bracket_:nth-last-of-type(1) {
+    display: inline;
+}
+
+.value_triangle .bracket:nth-of-type(1), .value_triangle param:nth-of-type(1), .value_triangle .bracket_:nth-of-type(2),
+.value_ceil .bracket:nth-of-type(1), .value_ceil param:nth-of-type(1), .value_ceil .bracket_:nth-of-type(2),
+.value_ln .bracket:nth-of-type(1), .value_ln param:nth-of-type(1), .value_ln .bracket_:nth-of-type(2),
+.value_abs .bracket:nth-of-type(1), .value_abs param:nth-of-type(1), .value_abs .bracket_:nth-of-type(2),
+.value_exp .bracket:nth-of-type(1), .value_exp param:nth-of-type(1), .value_exp .bracket_:nth-of-type(2) {
+    position: static;
+}
+
+.value_log param:nth-of-type(1) {
+    border-top-width: 0px;
+}

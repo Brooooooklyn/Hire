@@ -1,0 +1,34 @@
+body{
+    margin: 0;
+    text-align: center;
+}
+.lid{
+    width: 150px;
+    height: 150px;
+    border-radius: 60px;
+    -webkit-transform: rotatex(70deg);
+    -moz-transform: rotatex(70deg);
+    -o-transform: rotatex(70deg);
+    border: solid 1px gray;
+    border-top: solid 2px #000000;
+    margin: 200px auto -75px;
+    z-index: 10;
+    background: #D7DBBE;
+    background-image: linear-gradient(to bottom, transparent 62%, rgba(0, 0, 0, 0.4) 100%);
+    box-shadow: rgba(0, 0, 0, 0.6) 2px 2px 3px;
+}
+.cup{
+    width: 152px;
+    height: 200px;
+    border: 1px solid #ffffff;
+    margin: 0 auto;
+    z-index: 5;
+    background-image: linear-gradient(to right, gray , white, gray, black);
+    border-bottom-right-radius: 50px;
+    border-bottom-left-radius: 50px;
+}
+.teambition{
+    display: inline-block;
+    margin: 160px 0px 0px 60px;
+    white-space: pre;
+}

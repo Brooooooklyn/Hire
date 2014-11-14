@@ -1,0 +1,27 @@
+#result{
+    position: absolute;
+    right: 8px;
+    top: 8px;
+}
+#capture{
+    border-color: #000;
+    background-color: #262626;
+    box-shadow: inset 0px 1px 3px rgba(0, 0, 0, 0.15);
+    color: #fff;
+    text-decoration: none;
+    position: fixed;
+    bottom: 30px;
+    left: 5%;
+    padding: 0 12px;
+    width: 90%;
+    min-height: 50px;
+    border-width: 1px;
+    border-style: solid;
+    border-radius: 2px;
+    vertical-align: top;
+    text-align: center;
+    text-overflow: ellipsis;
+    font-size: 16px;
+    line-height: 42px;
+    cursor: pointer;
+}

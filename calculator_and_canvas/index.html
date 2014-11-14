@@ -1,0 +1,146 @@
+﻿<!DOCTYPE HTML>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no, target-densitydpi=device-dpi" />
+<script src="WorkerConsole.js"></script>
+<script src="js/json2.js"></script>
+<script src="js/environment-extra.js"></script>
+<script src="js/jquery-1.9.1.js"></script>
+<script src="js/jcanvas.js"></script>
+<script src="js/Yan.js"></script>
+<script src="js/Yan.DC.js"></script>
+
+<script src="js/lyn.dc.js"></script>
+<script src="js/lyn.script.js"></script>
+<script src="js/lyn.frame.js"></script>
+
+<script src="js/Yan.Lib.js"></script>
+<script src="js/Yan.IPanelController.js"></script>
+<script src="js/Yan.SettingController.js"></script>
+<script src="js/Yan.FuncList.js"></script>
+<script src="js/Yan.Grid.js"></script>
+<script src="js/Yan.Script.js"></script>
+<script src="js/Yan.Frame.js"></script>
+<script type="text/javascript">
+$(document).ready( function(e){
+	$(window).load(function(e){
+		var frame = new Yan.Frame();
+		$(window).resize(function(e){
+			frame.windowResize(e);
+		});
+		$(window).resize();
+	});
+});
+</script>
+<script src="js/jquery.mobile-1.3.0.js"></script>
+<link rel="stylesheet" href="css/orange.css" />
+<link rel="stylesheet" type="text/css" href="css/jquery.mobile.structure-1.3.0.css"/>
+<link rel="stylesheet" type="text/css" href="css/lyn.keyboard.style.css"/>
+<link rel="stylesheet" type="text/css" href="css/style.css"/>
+<title>Func Paint</title>
+</head>
+<body>
+<div data-role="page" data-theme="a">
+	<div data-role="header" id="app_bar" data-yan-contain="i-button">
+		<span class="logo"><img alt="Orange" src="images/logo.png"></span>
+		<span class="menu">
+			<a href="#settings" id="btn_settings" data-role="i-button" data-yan-action="i-panel" data-yan-icon="true" data-yan-icon-default='{"x":-312,"y":-235}'>setting</a>
+			<a href="#help" id="btn_help" data-role="i-button" data-yan-action="i-panel" data-yan-icon="true" data-yan-icon-default='{"x":-389,"y":-4}'>help</a>
+		</span>
+		<div class="clear"></div>
+	</div>
+	<div id="content" data-role="content" data-theme="a">
+		<div data-role="i-panel" id="func_list_panel" class="flow-panel">
+			<div data-role="i-panel-content" data-yan-wrap="i-func-list">
+				<div data-role="i-panel-title">
+					<span data-theme="b" class="ui-yan-panel-title-text" >Edit</span>
+					<a data-role="button" data-inline="true" href="#" data-theme="b" class="ui-yan-hide-ipanel">hide</a>
+					<div class="clear"></div>
+				</div>
+				<div data-role="i-panel-scroll-panel">
+					<ul data-role="listview" data-inset="true" id="func_list">
+						<li data-role="i-func-item">
+							<span data-role="i-func-index">index</span>
+							<span data-role="i-func-color"></span>
+							<div data-role="i-func-body">
+								<span  style="display: inline-block; float: left;" >
+									<a data-role="button" data-inline="true" href="#" class="ui-yan-func-visiable">eye</a>
+								</span>
+								<param data-role="i-func-expr"></param>
+								<span data-role="i-func-del"><a data-role="button" data-inline="true" href="#" class="ui-yan-del-func">del</a></span>
+							</div>
+							<div class="clear"></div>
+						</li>
+					</ul>
+					<div id="func_add_new">
+						<span data-role="i-func-index">index</span>
+						<div class="clear"></div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div data-role="i-panel" id="settings" class="flow-panel">
+			<div data-role="i-panel-content" data-yan-wrap="i-settings">
+				<div data-role="i-panel-title">
+					<span data-theme="b" class="ui-yan-panel-title-text" >Settings</span>
+					<a data-role="button" data-inline="true" href="#" data-theme="b" class="ui-yan-hide-ipanel">hide</a>
+					<div class="clear"></div>
+				</div>
+				<div data-role="i-panel-scroll-panel">
+					<div id="settings_panel" data-theme="b">
+						<label for="yan_line_weight">Line Weight:</label>
+						<input type="range" name="yan_line_weight" id="yan_line_weight" value="2" min="1" max="8"/>
+						<label for="yan_min_grid_size">Minimal Grid Size:</label>
+						<input type="range" name="yan_min_grid_size" id="yan_min_grid_size" value="40" min="20" max="40"/>
+						<label for="yan_max_grid_size">Maximum Grid Size:</label>
+						<input type="range" name="yan_max_grid_size" id="yan_max_grid_size" value="80" min="80" max="160"/>
+						<label for="yan_def_grid_size">Default Grid Size:</label>
+						<input type="range" name="yan_def_grid_size" id="yan_def_grid_size" value="40" min="20" max="160"/>
+						<label for="yan_lable_text_size">Lable Text Size:</label>
+						<input type="range" name="yan_lable_text_size" id="yan_lable_text_size" value="20" min="12" max="48" step="4"/>
+						<label for="yan_zoom_speed">Zoom Speed:</label>
+						<input type="range" name="yan_zoom_speed" id="yan_zoom_speed" value="2" min="1" max="6"/>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div data-role="i-panel" id="help" class="flow-panel">
+			<div data-role="i-panel-content" data-yan-wrap="i-help">
+				<div data-role="i-panel-title">
+					<span data-theme="b" class="ui-yan-panel-title-text" >Help</span>
+					<a data-role="button" data-inline="true" href="#" data-theme="b" class="ui-yan-hide-ipanel">hide</a>
+					<div class="clear"></div>
+				</div>
+				<div data-role="i-panel-scroll-panel">
+					<div id="help_panel" data-theme="a">
+						<div class="about">
+							<p>	<a href="#" data-role="button" data-transition="pop" id="about">About us.</a> </p>
+							<div id="about_content"></div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="content-bg-cover"></div>
+	</div>
+	<div data-role="footer" id="footer" data-yan-contain="i-button">
+		<p>
+			<a href="#func_list_panel" id="btn_edit" data-role="i-button" data-yan-action="i-panel" data-yan-icon="true" data-yan-icon-default='{"x":-81,"y":-81}'>edit</a>
+			<a href="#home" id="btn_home" data-role="i-button" data-yan-action="i-home" data-yan-icon="true" data-yan-icon-default='{"x":-158,"y":-81}'>home</a>
+			<a href="#key_board" id="btn_key_board" data-role="i-button" data-yan-action="i-keybard" data-yan-icon="true" data-yan-icon-default='{"x":-4,"y":-158}' data-yan-icon-action='{"x":-4,"y":-235}'>keyboard</a>
+			<a href="#full_screen" id="btn_full_screen" data-role="i-button" data-yan-action="i-full" data-yan-icon="true" data-yan-icon-default='{"x":-158,"y":-235}' data-yan-icon-action='{"x":-4,"y":-312}'>full screen</a>
+		</p>
+	</div>
+	<div data-role="iPanel" id="canvas_set">
+		<canvas id="canvas_pt" class="canvas" style="z-index:10;" height="1" width="1"></canvas>
+		<canvas id="canvas_fn" class="canvas" style="z-index:6;" height="1" width="1"></canvas>
+		<canvas id="canvas_bg" class="canvas" style="z-index:1;" height="1" width="1"></canvas>
+		<div id="keyboard_panel" data-role="i-keyboard-panel" class="ui-lyn-keyboard-panel">
+			<div id="keyboard"></div>
+			<div id="keyboard-plus"></div>
+		</div>
+	</div>
+</div>
+</body>
+</html>

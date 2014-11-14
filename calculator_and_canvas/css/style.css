@@ -1,0 +1,365 @@
+html {
+    overflow: hidden;
+    -webkit-user-select: none;
+    -ms-user-select: none;
+    font-family: Symbola, "Times New Roman", Times, serif;
+}
+
+body {
+    -ms-touch-action: none;
+}
+
+figure {
+    margin: 0;
+    padding: 0;
+    border: 0;
+}
+
+.clear {
+    clear: both;
+    line-height: 0px;
+    size: 0px;
+    height: 0px;
+    padding: 0;
+    margin: 0;
+    border: 0;
+}
+
+.flow-panel {
+    z-index: 100;
+    position: absolute;
+    display: none;
+    top: 0px;
+    left: 0px;
+    right: 0px;
+    bottom: 0px;
+    overflow: hidden;
+}
+
+#canvas_set {
+    z-index: -999;
+}
+
+#content {
+    overflow: hidden;
+    position: absolute;
+    z-index: 100;
+    left: 0px;
+    bottom: 0px;
+    top: 0px;
+    right: 0px;
+    background: none;
+}
+
+.content-bg-cover {
+    position: absolute;
+    z-index: 90;
+    left: 0px;
+    bottom: 0px;
+    top: 0px;
+    right: 0px;
+    background: #FFF;
+    opacity: 0.7;
+}
+
+.ui-header, .ui-footer {
+    position: absolute !important;
+    left: 0px;
+    right: 0px;
+    z-index: 999;
+    border: 0;
+}
+
+.ui-header {
+    top: 0px;
+    border-bottom: 1px solid #b3b3b3;
+}
+
+    .ui-header .logo {
+        float: left;
+        padding: 15px 10px;
+    }
+
+        .ui-header .logo img {
+            display: block;
+        }
+
+    .ui-header .menu {
+        float: right;
+        margin-right: 10px;
+        padding-top: 3px;
+    }
+
+        .ui-header .menu a {
+            margin: 0 5px 0 5px;
+        }
+
+.ui-footer {
+    bottom: 0px;
+    background: #333;
+}
+
+    .ui-footer p {
+        min-height: 36px;
+        text-align: center;
+        font-size: 16px;
+        display: block;
+        margin: 0;
+        padding: 3px 0 3px 0;
+        text-overflow: ellipsis;
+        overflow: hidden;
+        white-space: nowrap;
+        outline: 0 !important;
+    }
+
+    .ui-header a.i-btn, .ui-footer a.i-btn {
+        display: inline-block;
+        margin: 0 10px 0 10px;
+    }
+
+.ui-content {
+    padding: 0;
+    z-index: 0;
+}
+
+.ui-yan-icon {
+    background-image: url(../images/icon.png);
+    background-color: transparent;
+    background-repeat: no-repeat;
+    height: 70px;
+    width: 70px;
+    text-indent: -9999px;
+}
+
+.ui-header .ui-yan-icon {
+    padding: 3px 3px 0 3px;
+}
+
+.ui-footer .ui-yan-icon {
+    padding: 3px 3px 0px 3px;
+}
+
+canvas {
+    position: absolute;
+}
+
+.ui-yan-panel-content {
+}
+
+.ui-yan-panel-title {
+    min-height: 2em;
+    padding: .3em 0 .3em 70px;
+    position: relative;
+    left: 0px;
+    right: 0px;
+    top: 0px;
+    z-index: 1;
+    background: #fff;
+    border-bottom: 1px solid #ccc;
+}
+
+.ui-yan-panel-title-text {
+    display: inline-block;
+    font-size: 38px;
+    font-weight: bold;
+    text-shadow: 0 0 10px #f6921b;
+    float: left;
+    padding: .1em 50px .1em 0;
+    margin: .4em 0;
+    color: #f6921b;
+    margin: .2em 0;
+}
+
+.ui-yan-panel-title .ui-btn {
+    margin: 0.5em 0;
+}
+
+.ui-yan-panel-scroll-panel {
+    overflow-x: hidden;
+    overflow-y: auto;
+    position: relative;
+    left: 0px;
+    right: 0px;
+    top: 0px;
+    z-index: 0;
+    background-color: #FFF;
+}
+
+    .ui-yan-panel-scroll-panel .ui-yan-func-list, #func_add_new {
+        margin: 0;
+        padding: 0 40px;
+        box-shadow: none;
+    }
+
+#func_add_new {
+    padding-left: 55px;
+}
+
+#settings_panel {
+    padding-left: 65px;
+    padding-right: 60px;
+}
+
+.ui-yan-func-list .ui-yan-func-item, #func_add_new {
+    border-bottom: 1px solid #d3d3d3;
+}
+
+    .ui-yan-func-list .ui-yan-func-item .ui-yan-func-index, .ui-yan-func-list .ui-yan-func-item .ui-yan-func-color, #func_add_new .ui-yan-func-index {
+        float: left;
+        width: 40px;
+        padding: 0 0 0 5px;
+        display: block;
+        height: 100px;
+        font-size: 18px;
+    }
+
+    #func_add_new .ui-yan-func-index {
+        height: 70px;
+    }
+
+    .ui-yan-func-list .ui-yan-func-item .ui-yan-func-color {
+        border-left: 1px solid #d3d3d3;
+        width: 0px;
+    }
+
+    .ui-yan-func-list .ui-yan-func-item .ui-yan-func-body {
+        margin-left: 55px;
+        min-height: 2em;
+        overflow: hidden;
+    }
+
+        .ui-yan-func-list .ui-yan-func-item .ui-yan-func-body .ui-yan-func-expr {
+            padding-left: 10px;
+            min-width: 800px;
+            max-width: 1280px;
+            display: inline-block;
+            overflow-x: auto;
+            overflow-y: hidden;
+            height: 100px;
+        }
+
+        .ui-yan-func-list .ui-yan-func-item .ui-yan-func-body .ui-yan-func-del {
+            float: right;
+        }
+
+            .ui-yan-func-list .ui-yan-func-item .ui-yan-func-body .ui-yan-func-del:active, .ui-yan-func-visiable:active {
+                opacity: 0.3;
+            }
+
+.ui-yan-edit {
+    float: left;
+    border-radius: 30px;
+    box-shadow: 0 0 5px #aaa;
+}
+
+    .ui-yan-edit .ui-btn-inner, .ui-yan-hide-ipanel .ui-btn-inner {
+        padding: .1em 30px .1em;
+        border: 0;
+        font-size: 38px;
+    }
+
+.ui-yan-hide-ipanel {
+    float: right;
+    display: inline-block;
+    box-shadow: 0px 0px 5px #aaa;
+    opacity: 0.99;
+}
+
+    .ui-yan-hide-ipanel:before {
+        content: '';
+        box-shadow: 0 0 5px #fbbb75;
+        z-index: -9999;
+        display: block;
+        position: absolute;
+        background: #fbbb75;
+        top: 8px;
+        left: -20px;
+        width: 37px;
+        height: 37px;
+        transform: rotate(45deg);
+        -ms-transform: rotate(45deg);
+        -webkit-transform: rotate(45deg);
+        -o-transform: rotate(45deg);
+        -moz-transform: rotate(45deg);
+        left: -20px;
+        width: 37px;
+        height: 37px;
+    }
+
+.ui-btn-hover-b.ui-yan-hide-ipanel:before {
+    background: #f6921d;
+    box-shadow: 0 0 5px #f6921d;
+}
+
+.ui-yan-del-func, .ui-yan-func-visiable {
+    text-indent: -9999px;
+    background-image: url(../images/icon.png);
+    background-repeat: no-repeat;
+    background-color: transparent;
+}
+
+.ui-yan-del-func {
+    background-position: -315px -7px;
+}
+
+.ui-yan-func-visiable {
+    background-image: url(../images/eye.png);
+}
+
+    .ui-yan-func-visiable.visible {
+        background-position: 0px 0px;
+    }
+
+    .ui-yan-func-visiable.hide {
+        background-position: -80px 0px;
+    }
+
+    .ui-yan-del-func, .ui-yan-del-func span, .ui-yan-func-visiable, .ui-yan-func-visiable span {
+        border: 0;
+        width: 70px;
+        height: 70px;
+        margin: 0;
+        padding: 0;
+        box-shadow: none;
+    }
+
+        .ui-yan-del-func.ui-btn-hover-a {
+            background-position: -83px -7px;
+        }
+
+label.ui-slider, .ui-field-contain label.ui-slider, div.ui-slider {
+    line-height: 60px;
+    font-size: 28px;
+}
+
+div.ui-slider {
+    height: 60px;
+}
+
+input.ui-input-text.ui-slider-input {
+    width: 60px;
+    height: 52px;
+    line-height: 52px;
+    font-size: 26px;
+}
+
+.ui-slider-track, .ui-slider-switch {
+    height: 30px;
+    margin: 0 50px 0 90px;
+    top: 15px;
+    border-radius: 15px;
+}
+
+    .ui-slider-track .ui-btn.ui-slider-handle, .ui-slider-switch .ui-btn.ui-slider-handle {
+        border-radius: 50%;
+        border: 2px solid #fbbb75;
+        box-shadow: 0 0 5px #fbbb75;
+        width: 50px;
+        height: 50px;
+        top: 10%;
+    }
+
+.about {
+    width: 500px;
+    margin: auto;
+}

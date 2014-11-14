@@ -1,0 +1,88 @@
+@CHARSET "UTF-8";
+.ui-footer {
+border-left-width: 0;
+border-right-width: 0;
+bottom: 0px;
+background: #333;
+position: absolute !important;
+left: 0px;
+right: 0px;
+z-index: 999;
+border: 0;
+font-family: Helvetica, Arial, sans-serif /*{global-font-family}*/;
+}
+.ui-footer p {
+min-height: 36px;
+text-align: center;
+font-size: 16px;
+display: block;
+margin: 0;
+padding: 3px 0 3px 0;
+text-overflow: ellipsis;
+overflow: hidden;
+white-space: nowrap;
+outline: 0 !important;
+color: #3e3e3e /*{a-bar-color}*/;
+font-weight: bold;
+text-shadow: 0 /*{a-bar-shadow-x}*/ 1px /*{a-bar-shadow-y}*/ 0 /*{a-bar-shadow-radius}*/ #ffffff /*{a-bar-shadow-color}*/;
+-webkit-margin-before: 1em;
+-webkit-margin-after: 1em;
+-webkit-margin-start: 0px;
+-webkit-margin-end: 0px;
+}
+#btn_edit{
+	color: #2489ce /*{a-bar-link-visited}*/;
+	opacity: 1;
+	background-position: -81px -81px;
+	display: inline-block;
+	margin: 0 10px 0 10px;
+	font-weight: bold;
+	padding: 3px 3px 0px 3px;
+	background-image: url(../images/icon.png);
+	background-color: transparent;
+	background-repeat: no-repeat;
+	height: 70px;
+	width: 70px;
+	text-indent: -9999px;
+	ext-align: center;
+	font-size: 16px;
+	white-space: nowrap;
+}
+#btn_home{
+	opacity: 1;
+	background-position: -158px -81px;
+	display: inline-block;
+	margin: 0 10px 0 10px;
+	font-weight: bold;
+	padding: 3px 3px 0px 3px;
+	background-image: url(../images/icon.png);
+	background-color: transparent;
+	background-repeat: no-repeat;
+	height: 70px;
+	width: 70px;
+	text-indent: -9999px;
+}
+#btn_key_board{
+	opacity: 1;
+	background-position: -4px -158px;
+	color: #2489ce /*{a-bar-link-visited}*/;
+	background-image: url(../images/icon.png);
+	background-color: transparent;
+	background-repeat: no-repeat;
+	height: 70px;
+	width: 70px;
+	text-indent: -9999px;
+	display: inline-block;
+	margin: 0 10px 0 10px;
+	font-weight: bold;
+}
+#full_screen{
+	background-image: url(../images/icon.png);
+	background-color: transparent;
+	background-repeat: no-repeat;
+	height: 70px;
+	width: 70px;
+	text-indent: -9999px;
+	background-position: -158px -235px;
+	color: #2489ce /*{a-bar-link-visited}*/;
+}
